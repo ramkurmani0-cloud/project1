@@ -14,8 +14,8 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 
 # Model routing config
-SIMPLE_MODEL = "llama-3.3-70b-versatile"
-ADVANCED_MODEL = "llama-3.3-70b-versatile"
+SIMPLE_MODEL = "gemma2-9b-it"
+ADVANCED_MODEL = "mixtral-8x7b-32768"
 
 class GroqClient:
     """Manages Groq API interactions with CascadeFlow routing."""
