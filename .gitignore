@@ -1,0 +1,9 @@
+.env
+data/
+uploads/
+memory_store/
+__pycache__/
+*.pyc
+*.db
+*.sqlite
+*.zip
