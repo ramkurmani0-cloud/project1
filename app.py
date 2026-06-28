@@ -48,10 +48,11 @@ html, body, [class*="css"] {
     font-family: 'Inter', sans-serif !important;
 }
 
-p, li, span, div {
+p, li {
     color: #e8eaf6 !important;
     font-size: 15px !important;
 }
+
 
 h1 { font-size: 2rem !important; color: #ffffff !important; }
 h2 { font-size: 1.6rem !important; color: #c5cae9 !important; }
