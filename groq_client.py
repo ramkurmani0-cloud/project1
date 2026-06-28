@@ -14,8 +14,8 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 
 # Model routing config
-SIMPLE_MODEL = "gemma2-9b-it"
-ADVANCED_MODEL = "mixtral-8x7b-32768"
+SIMPLE_MODEL = "openai/gpt-oss-20b"
+ADVANCED_MODEL = "openai/gpt-oss-120b"
 
 class GroqClient:
     """Manages Groq API interactions with CascadeFlow routing."""
