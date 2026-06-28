@@ -14,15 +14,18 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 
 # Model routing config
-SIMPLE_MODEL = "llama3-8b-8192"       # Fast, cheap - for simple tasks
-ADVANCED_MODEL = "llama3-70b-8192"    # Powerful - for complex tasks
-
+SIMPLE_MODEL = "llama-3.1-8b-instant"
+ADVANCED_MODEL = "llama-3.3-70b-versatile"
 
 class GroqClient:
     """Manages Groq API interactions with CascadeFlow routing."""
 
     def __init__(self):
-        self.api_key = os.getenv("GROQ_API_KEY", "")
+        try:
+            import streamlit as st
+            self.api_key = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY", ""))
+        except Exception:
+            self.api_key = os.getenv("GROQ_API_KEY", "")
         if not self.api_key:
             logger.warning("Groq API key not provided. Set GROQ_API_KEY in your .env file.")
             self.client = None
