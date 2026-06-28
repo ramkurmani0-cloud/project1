@@ -41,46 +41,65 @@ st.markdown("""
 [data-testid="stAppViewContainer"] { background: #0f1117; }
 [data-testid="stSidebar"] { background: #1a1d27; border-right: 1px solid #2d3148; }
 
+/* Make all general text brighter and bigger */
+html, body, [class*="css"] {
+    font-size: 16px !important;
+    color: #e8eaf6 !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+p, li, span, div {
+    color: #e8eaf6 !important;
+    font-size: 15px !important;
+}
+
+h1 { font-size: 2rem !important; color: #ffffff !important; }
+h2 { font-size: 1.6rem !important; color: #c5cae9 !important; }
+h3 { font-size: 1.3rem !important; color: #c5cae9 !important; }
+
 /* Chat bubbles */
 .user-bubble {
     background: linear-gradient(135deg, #4f46e5, #7c3aed);
-    color: white; border-radius: 18px 18px 4px 18px;
+    color: white !important; border-radius: 18px 18px 4px 18px;
     padding: 12px 18px; margin: 8px 0; max-width: 80%;
     margin-left: auto; box-shadow: 0 2px 12px rgba(79,70,229,0.3);
+    font-size: 15px !important;
 }
 .assistant-bubble {
-    background: #1e2235; color: #e2e8f0;
+    background: #1e2235; color: #e8eaf6 !important;
     border-radius: 18px 18px 18px 4px;
     padding: 12px 18px; margin: 8px 0; max-width: 85%;
     border: 1px solid #2d3148; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    font-size: 15px !important;
 }
-.bubble-time { font-size: 0.7rem; opacity: 0.5; margin-top: 4px; }
+.bubble-time { font-size: 0.75rem !important; opacity: 0.7; margin-top: 4px; }
 
 /* Risk badges */
-.risk-high { background:#3d1515; border:1px solid #ff4b4b; border-radius:8px; padding:12px; margin:6px 0; }
-.risk-medium { background:#3d2a0a; border:1px solid #ffa500; border-radius:8px; padding:12px; margin:6px 0; }
-.risk-low { background:#0a2d1a; border:1px solid #00c853; border-radius:8px; padding:12px; margin:6px 0; }
+.risk-high { background:#3d1515; border:1px solid #ff4b4b; border-radius:8px; padding:12px; margin:6px 0; color:#ffcccc !important; }
+.risk-medium { background:#3d2a0a; border:1px solid #ffa500; border-radius:8px; padding:12px; margin:6px 0; color:#ffe0b2 !important; }
+.risk-low { background:#0a2d1a; border:1px solid #00c853; border-radius:8px; padding:12px; margin:6px 0; color:#c8e6c9 !important; }
 
 /* Metric cards */
 .metric-card {
     background: #1e2235; border: 1px solid #2d3148;
     border-radius: 12px; padding: 16px; text-align: center;
 }
-.metric-value { font-size: 2rem; font-weight: 700; }
-.metric-label { font-size: 0.8rem; color: #8892b0; margin-top: 4px; }
+.metric-value { font-size: 2rem !important; font-weight: 700; }
+.metric-label { font-size: 0.9rem !important; color: #b0bec5 !important; margin-top: 4px; }
 
 /* Memory alert */
 .memory-alert {
     background: #1a2744; border-left: 4px solid #4f46e5;
     border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 8px 0;
-    font-size: 0.9rem; color: #a5b4fc;
+    font-size: 0.95rem !important; color: #c5cae9 !important;
 }
 
 /* Audit log */
 .audit-entry {
     background: #12151f; border: 1px solid #2d3148;
     border-radius: 6px; padding: 8px 12px; margin: 4px 0;
-    font-family: monospace; font-size: 0.78rem;
+    font-family: monospace; font-size: 0.85rem !important;
+    color: #e8eaf6 !important;
 }
 
 /* Status indicator */
@@ -89,7 +108,7 @@ st.markdown("""
 
 /* Section header */
 .section-header {
-    font-size: 1.1rem; font-weight: 600; color: #a5b4fc;
+    font-size: 1.1rem !important; font-weight: 600; color: #c5cae9 !important;
     border-bottom: 1px solid #2d3148; padding-bottom: 8px; margin-bottom: 12px;
 }
 
