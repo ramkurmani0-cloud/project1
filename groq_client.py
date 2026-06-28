@@ -14,7 +14,7 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 
 # Model routing config
-SIMPLE_MODEL = "llama-3.1-8b-instant"
+SIMPLE_MODEL = "llama-3.3-70b-versatile"
 ADVANCED_MODEL = "llama-3.3-70b-versatile"
 
 class GroqClient:
